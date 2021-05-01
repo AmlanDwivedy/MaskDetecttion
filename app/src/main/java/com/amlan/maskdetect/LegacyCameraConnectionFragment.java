@@ -16,6 +16,7 @@ package com.amlan.maskdetect;
  * limitations under the License.
  */
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
@@ -36,8 +37,8 @@ import com.amlan.maskdetect.customview.AutoFitTextureView;
 import com.amlan.maskdetect.env.ImageUtils;
 import com.amlan.maskdetect.env.Logger;
 
-import org.tensorflow.lite.examples.detection.R;
 
+@SuppressLint("ValidFragment")
 public class LegacyCameraConnectionFragment extends Fragment {
   private static final Logger LOGGER = new Logger();
   /** Conversion from screen rotation to JPEG orientation. */

@@ -62,7 +62,6 @@ import java.util.concurrent.TimeUnit;
 import com.amlan.maskdetect.customview.AutoFitTextureView;
 import com.amlan.maskdetect.env.Logger;
 
-import org.tensorflow.lite.examples.detection.R;
 
 @SuppressLint("ValidFragment")
 public class CameraConnectionFragment extends Fragment {

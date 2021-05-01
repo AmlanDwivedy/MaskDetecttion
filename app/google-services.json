@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "577317628605",
+    "project_id": "code4crissis",
+    "storage_bucket": "code4crissis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577317628605:android:69e0d7084379345e1e65d4",
+        "android_client_info": {
+          "package_name": "com.amlan.maskdetect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577317628605-n1mqoi452nlvtleso2btqrhi3ha0769n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdG1tG084bQ1S0ETp9rAu6h9Kt2sBgnxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577317628605-n1mqoi452nlvtleso2btqrhi3ha0769n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

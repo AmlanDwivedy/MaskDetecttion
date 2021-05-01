@@ -61,7 +61,6 @@ import java.nio.ByteBuffer;
 import com.amlan.maskdetect.env.ImageUtils;
 import com.amlan.maskdetect.env.Logger;
 
-import org.tensorflow.lite.examples.detection.R;
 
 public abstract class CameraActivity extends AppCompatActivity
         implements OnImageAvailableListener,

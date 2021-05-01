@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.detection;
+package com.amlan.maskdetect.detection;
 
 import static com.google.common.truth.Truth.assertThat;
 import static java.lang.Math.abs;
