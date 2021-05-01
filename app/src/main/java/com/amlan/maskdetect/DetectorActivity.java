@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.detection;
+package com.amlan.maskdetect;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -41,17 +41,17 @@ import com.google.mlkit.vision.face.FaceDetector;
 import com.google.mlkit.vision.face.FaceDetectorOptions;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import org.tensorflow.lite.examples.detection.customview.OverlayView;
-import org.tensorflow.lite.examples.detection.customview.OverlayView.DrawCallback;
-import org.tensorflow.lite.examples.detection.env.BorderedText;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.tflite.Classifier;
-import org.tensorflow.lite.examples.detection.tflite.TFLiteObjectDetectionAPIModel;
-import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
+import com.amlan.maskdetect.customview.OverlayView;
+import com.amlan.maskdetect.customview.OverlayView.DrawCallback;
+import com.amlan.maskdetect.env.BorderedText;
+import com.amlan.maskdetect.env.ImageUtils;
+import com.amlan.maskdetect.env.Logger;
+import com.amlan.maskdetect.tflite.Classifier;
+import com.amlan.maskdetect.tflite.TFLiteObjectDetectionAPIModel;
+import com.amlan.maskdetect.tracking.MultiBoxTracker;
+
 
 /**
  * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
@@ -59,14 +59,6 @@ import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
  */
 public class DetectorActivity extends CameraActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
-
-  // Configuration values for the prepackaged SSD model.
-  //private static final int TF_OD_API_INPUT_SIZE = 300;
-  //private static final boolean TF_OD_API_IS_QUANTIZED = true;
-  //private static final String TF_OD_API_MODEL_FILE = "detect.tflite";
-  //private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/labelmap.txt";
-
-  //private static final Size DESIRED_PREVIEW_SIZE = new Size(640, 480);
 
   // Face Mask
   private static final int TF_OD_API_INPUT_SIZE = 224;
@@ -80,8 +72,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private static final boolean MAINTAIN_ASPECT = false;
 
   private static final Size DESIRED_PREVIEW_SIZE = new Size(800, 600);
-  //private static final int CROP_SIZE = 320;
-  //private static final Size CROP_SIZE = new Size(320, 320);
 
 
 

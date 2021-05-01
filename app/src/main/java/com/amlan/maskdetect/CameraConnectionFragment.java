@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.detection;
+package com.amlan.maskdetect;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -59,8 +59,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
-import org.tensorflow.lite.examples.detection.customview.AutoFitTextureView;
-import org.tensorflow.lite.examples.detection.env.Logger;
+import com.amlan.maskdetect.customview.AutoFitTextureView;
+import com.amlan.maskdetect.env.Logger;
+
+import org.tensorflow.lite.examples.detection.R;
 
 @SuppressLint("ValidFragment")
 public class CameraConnectionFragment extends Fragment {

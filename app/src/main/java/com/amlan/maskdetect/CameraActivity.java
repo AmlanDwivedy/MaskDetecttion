@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.detection;
+package com.amlan.maskdetect;
 
 import android.Manifest;
 import android.app.Fragment;
@@ -58,8 +58,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.nio.ByteBuffer;
 
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
+import com.amlan.maskdetect.env.ImageUtils;
+import com.amlan.maskdetect.env.Logger;
+
+import org.tensorflow.lite.examples.detection.R;
 
 public abstract class CameraActivity extends AppCompatActivity
         implements OnImageAvailableListener,
@@ -111,8 +113,8 @@ public abstract class CameraActivity extends AppCompatActivity
         super.onCreate(null);
 
         Intent intent = getIntent();
-        //useFacing = intent.getIntExtra(KEY_USE_FACING, CameraCharacteristics.LENS_FACING_FRONT);
-        useFacing = intent.getIntExtra(KEY_USE_FACING, CameraCharacteristics.LENS_FACING_BACK);
+        useFacing = intent.getIntExtra(KEY_USE_FACING, CameraCharacteristics.LENS_FACING_FRONT);
+//        useFacing = intent.getIntExtra(KEY_USE_FACING, CameraCharacteristics.LENS_FACING_BACK);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -154,7 +156,7 @@ public abstract class CameraActivity extends AppCompatActivity
                         sheetBehavior.setPeekHeight(height);
                     }
                 });
-        sheetBehavior.setHideable(false);
+        sheetBehavior.setHideable(true);
 
         sheetBehavior.setBottomSheetCallback(
                 new BottomSheetBehavior.BottomSheetCallback() {

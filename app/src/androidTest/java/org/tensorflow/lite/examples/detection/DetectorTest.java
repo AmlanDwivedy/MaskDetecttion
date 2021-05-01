@@ -39,10 +39,10 @@ import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.tflite.Classifier;
-import org.tensorflow.lite.examples.detection.tflite.Classifier.Recognition;
-import org.tensorflow.lite.examples.detection.tflite.TFLiteObjectDetectionAPIModel;
+import com.amlan.maskdetect.env.ImageUtils;
+import com.amlan.maskdetect.tflite.Classifier;
+import com.amlan.maskdetect.tflite.Classifier.Recognition;
+import com.amlan.maskdetect.tflite.TFLiteObjectDetectionAPIModel;
 
 /** Golden test for Object Detection Reference app. */
 @RunWith(AndroidJUnit4.class)
