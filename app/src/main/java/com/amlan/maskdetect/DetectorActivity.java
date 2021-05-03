@@ -34,6 +34,7 @@ import android.util.TypedValue;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.face.Face;
 import com.google.mlkit.vision.face.FaceDetection;
@@ -106,11 +107,13 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   // here the face is cropped and drawn
   private Bitmap faceBmp = null;
 
+  private FirebaseAnalytics mFirebaseAnalytics;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
     // Real-time contour detection of multiple faces
     FaceDetectorOptions options =
@@ -456,6 +459,8 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
             }
           }
 
+          // log analytics
+          logAnalytics(result);
         }
 
         if (getCameraFacing() == CameraCharacteristics.LENS_FACING_FRONT) {
@@ -482,6 +487,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
         mappedRecognitions.add(result);
 
 
+
       }
 
 
@@ -494,6 +500,14 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     updateResults(currTimestamp, mappedRecognitions);
 
 
+  }
+
+  private void logAnalytics(Classifier.Recognition result) {
+    boolean isMaskedUp = false;
+    if(result.getId().equals("0")){
+      isMaskedUp = true;
+    }
+    mFirebaseAnalytics.setUserProperty("isMaskedUp", String.valueOf(isMaskedUp));
   }
 
 
